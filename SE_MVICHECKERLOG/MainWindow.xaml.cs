@@ -42,8 +42,6 @@ namespace SE_MVICHECKERLOG
             {
                 _pathServer = Environment.CurrentDirectory + "\\MVILog";
             }
-
-            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -56,6 +54,9 @@ namespace SE_MVICHECKERLOG
             txtIdSheet.Focus();
 
             //btnTA1.Background = Brushes.Red;
+
+            btnTA6.Background = Brushes.Red;
+            Grid.SetRow(btnTA6, 2); // Di chuyển btnTG1 đến hàng 2
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -64,6 +65,8 @@ namespace SE_MVICHECKERLOG
             RadioButton radioButton = sender as RadioButton;
             if (radioButton != null)
             {
+                MessageBox.Show(radioButton.Content + " được chọn.");
+                MessageBox.Show(radioButton.Content + " được chọn.");
                 MessageBox.Show(radioButton.Content + " được chọn.");
             }
         }
@@ -83,7 +86,7 @@ namespace SE_MVICHECKERLOG
             "63", "100%"
          };
 
-        public string[] arrMaps =
+        public string[] arrMapsXuoi =
         {
             "G1", "F1", "E1", "D1", "C1", "B1", "A1",
             "G2", "F2", "E2", "D2", "C2", "B2", "A2",
@@ -95,6 +98,34 @@ namespace SE_MVICHECKERLOG
             "G8", "F8", "E8", "D8", "C8", "B8", "A8",
             "G9", "F9", "E9", "D9", "C9", "B9", "A9"
         };
+
+        public string[] arrMapsNguoc =
+{
+            "G1", "F1", "E1", "D1", "C1", "B1", "A1",
+            "G2", "F2", "E2", "D2", "C2", "B2", "A2",
+            "G3", "F3", "E3", "D3", "C3", "B3", "A3",
+            "G4", "F4", "E4", "D4", "C4", "B4", "A4",
+            "G5", "F5", "E5", "D5", "C5", "B5", "A5",
+            "G6", "F6", "E6", "D6", "C6", "B6", "A6",
+            "G7", "F7", "E7", "D7", "C7", "B7", "A7",
+            "G8", "F8", "E8", "D8", "C8", "B8", "A8",
+            "G9", "F9", "E9", "D9", "C9", "B9", "A9"
+        };
+
+        //Check lại
+        public string[] arrMaps =
+{
+            "G1", "F1", "E1", "D1", "C1", "B1", "A1",
+            "G2", "F2", "E2", "D2", "C2", "B2", "A2",
+            "G3", "F3", "E3", "D3", "C3", "B3", "A3",
+            "G4", "F4", "E4", "D4", "C4", "B4", "A4",
+            "G5", "F5", "E5", "D5", "C5", "B5", "A5",
+            "G6", "F6", "E6", "D6", "C6", "B6", "A6",
+            "G7", "F7", "E7", "D7", "C7", "B7", "A7",
+            "G8", "F8", "E8", "D8", "C8", "B8", "A8",
+            "G9", "F9", "E9", "D9", "C9", "B9", "A9"
+        };
+
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
             try

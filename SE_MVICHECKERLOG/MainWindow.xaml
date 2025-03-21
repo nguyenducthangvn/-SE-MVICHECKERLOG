@@ -70,17 +70,6 @@
             </Grid>
         </ScrollViewer>-->
 
-            <Grid Grid.RowSpan="2" Margin="0,0,0,115">
-
-                <!--<ScrollViewer  
-x:Name="viewer"  
-HorizontalScrollBarVisibility="Visible"  
-VerticalScrollBarVisibility="Visible">
-                <Image Source="/Assets/logo.jpg" Stretch="Uniform">
-                </Image>
-            </ScrollViewer>-->
-            </Grid>
-
             <DockPanel Grid.Row="0">
                 <TextBlock FontSize="30" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">ID Sheet</TextBlock>
                 <TextBox x:Name="txtIdSheet" Width="368" HorizontalAlignment="Left" Height="40" FontSize="25" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" KeyDown="TextBox_KeyDown"></TextBox>
@@ -92,8 +81,10 @@ VerticalScrollBarVisibility="Visible">
                 <RowDefinition Height="8*"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Margin="-615,82,850,125" Grid.RowSpan="2">
+            
+            <Grid x:Name="GridBtn" Grid.Row="0" Margin="-615,82,837,80" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
@@ -104,6 +95,7 @@ VerticalScrollBarVisibility="Visible">
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -132,8 +124,223 @@ VerticalScrollBarVisibility="Visible">
                 <TextBlock Grid.Row="7" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">7</TextBlock>
                 <TextBlock Grid.Row="8" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">8</TextBlock>
                 <TextBlock Grid.Row="9" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">9</TextBlock>
+                
+                <Line x:Name="LineVatTruoc" 
+                      Grid.Row="0" 
+                      Grid.Column="8" 
+                      X1="0" 
+                      Y1="0" 
+                      X2="200" 
+                      Y2="200" 
+                      Stroke="Gray" 
+                      StrokeThickness="5"/>
+                <Border x:Name="borderTruoc1" BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="8">
+                </Border>
+                <Border x:Name="borderTruoc2" BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="8">
+                </Border>
 
-                <Button x:Name="btnTA1" Grid.Row="1" Grid.Column="1" Background="Green" Click="Button_Click" GotFocus="Button_GotFocus" Height="59" VerticalAlignment="Bottom" LostFocus="Button_LostFocus" FontSize="25" VerticalContentAlignment="Center" HorizontalAlignment="Center">
+                <!--<Border BorderThickness="0,0,1,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="10" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,0,1" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="8">
+                </Border>-->
+
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="1">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="2">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="3">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="4">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="5">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="6">
+                </Border>
+                <Border BorderThickness="0,5,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="7">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="1">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="2">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="3">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="4">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="5">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="6">
+                </Border>
+                <Border BorderThickness="0,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="11" 
+                        Grid.Column="7">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="0" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="1" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="2" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="3" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="4" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="5" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="6" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="7" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="8" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="9" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="5,0,0,5" 
+                        BorderBrush="Gray" 
+                        Grid.Row="10" 
+                        Grid.Column="0">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="1" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="2" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="3" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="4" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="5" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="6" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="7" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="8" 
+                        Grid.Column="8">
+                </Border>
+                <Border BorderThickness="0,0,5,0" 
+                        BorderBrush="Gray" 
+                        Grid.Row="9" 
+                        Grid.Column="8">
+                </Border>
+
+
+
+
+                <Button x:Name="btnTA1"  Grid.Row="1" Grid.Column="1" Background="Green" Click="Button_Click" GotFocus="Button_GotFocus" Height="59" VerticalAlignment="Bottom" LostFocus="Button_LostFocus" FontSize="25" VerticalContentAlignment="Center" HorizontalAlignment="Center">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Grid>
