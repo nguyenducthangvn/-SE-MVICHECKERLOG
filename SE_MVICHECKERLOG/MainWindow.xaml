@@ -144,17 +144,25 @@
                         Grid.Row="0" 
                         Grid.Column="8">
                 </Border>
-
-                <!--<Border BorderThickness="0,0,1,0" 
+                <Line x:Name="LineVatSau" 
+                      Grid.Row="11" 
+                      Grid.Column="8" 
+                      X1="59" 
+                      Y1="0" 
+                      X2="0" 
+                      Y2="57" 
+                      Stroke="Gray" 
+                      StrokeThickness="5"/>
+                <Border x:Name="borderSau1" BorderThickness="0,0,0,5" 
                         BorderBrush="Gray" 
                         Grid.Row="10" 
                         Grid.Column="8">
                 </Border>
-                <Border BorderThickness="0,0,0,1" 
+                <Border x:Name="borderSau2" BorderThickness="0,0,5,0" 
                         BorderBrush="Gray" 
                         Grid.Row="11" 
                         Grid.Column="8">
-                </Border>-->
+                </Border>
 
                 <Border BorderThickness="0,5,0,0" 
                         BorderBrush="Gray" 
