@@ -71,6 +71,30 @@ namespace SE_MVICHECKERLOG
             }
         }
 
+        private string[,] arrMatTruoc = {
+            {"btnTA1", "btnTB1", "btnTC1", "btnTD1", "btnTE1", "btnTF1", "btnTG1"},
+            {"btnTA2", "btnTB2", "btnTC2", "btnTD2", "btnTE2", "btnTF2", "btnTG2"},
+            {"btnTA3", "btnTB3", "btnTC3", "btnTD3", "btnTE3", "btnTF3", "btnTG3"},
+            {"btnTA4", "btnTB4", "btnTC4", "btnTD4", "btnTE4", "btnTF4", "btnTG4"},
+            {"btnTA5", "btnTB5", "btnTC5", "btnTD5", "btnTE5", "btnTF5", "btnTG5"},
+            {"btnTA6", "btnTB6", "btnTC6", "btnTD6", "btnTE6", "btnTF6", "btnTG6"},
+            {"btnTA7", "btnTB7", "btnTC7", "btnTD7", "btnTE7", "btnTF7", "btnTG7"},
+            {"btnTA8", "btnTB8", "btnTC8", "btnTD8", "btnTE8", "btnTF8", "btnTG8"},
+            {"btnTA9", "btnTB9", "btnTC9", "btnTD9", "btnTE9", "btnTF9", "btnTG9"},
+        };
+
+        private string[,] arrMatSau = {
+            {"btnTA9", "btnTB9", "btnTC9", "btnTD9", "btnTE9", "btnTF9", "btnTG9"},
+            {"btnTA8", "btnTB8", "btnTC8", "btnTD8", "btnTE8", "btnTF8", "btnTG8"},
+            {"btnTA7", "btnTB7", "btnTC7", "btnTD7", "btnTE7", "btnTF7", "btnTG7"},
+            {"btnTA6", "btnTB6", "btnTC6", "btnTD6", "btnTE6", "btnTF6", "btnTG6"},
+            {"btnTA5", "btnTB5", "btnTC5", "btnTD5", "btnTE5", "btnTF5", "btnTG5"},
+            {"btnTA4", "btnTB4", "btnTC4", "btnTD4", "btnTE4", "btnTF4", "btnTG4"},
+            {"btnTA3", "btnTB3", "btnTC3", "btnTD3", "btnTE3", "btnTF3", "btnTG3"},
+            {"btnTA2", "btnTB2", "btnTC2", "btnTD2", "btnTE2", "btnTF2", "btnTG2"},
+            {"btnTA1", "btnTB1", "btnTC1", "btnTD1", "btnTE1", "btnTF1", "btnTG1"},
+        };
+
         public string[] dataSheet = new string[]
         {
             "", "", "Stop",
@@ -649,6 +673,53 @@ namespace SE_MVICHECKERLOG
 
                 }
             }
+        }
+
+
+
+        private void LayoutSheet(bool mat)
+        {
+            TextBlock[] arrRowIndex = new TextBlock[] { txtRow1, txtRow2, txtRow3, txtRow4, txtRow5, txtRow6, txtRow7, txtRow8, txtRow9 };
+            if (mat) //Mặt trước
+            {
+                LineVatTruoc.Visibility = Visibility.Visible;
+                borderTruoc1.Visibility = Visibility.Hidden;
+                borderTruoc2.Visibility = Visibility.Hidden;
+
+                LineVatSau.Visibility = Visibility.Hidden;
+                borderSau1.Visibility = Visibility.Visible;
+                borderSau2.Visibility = Visibility.Visible;
+
+                for (global::System.Int32 i = 1; i < arrRowIndex.Count() + 1; i++)
+                {
+                    Grid.SetRow(arrRowIndex[i], i);
+                }
+            }
+            else //Mặt sau
+            {
+                LineVatTruoc.Visibility = Visibility.Hidden;
+                borderTruoc1.Visibility = Visibility.Visible;
+                borderTruoc2.Visibility = Visibility.Visible;
+
+                LineVatSau.Visibility = Visibility.Visible;
+                borderSau1.Visibility = Visibility.Hidden;
+                borderSau2.Visibility = Visibility.Hidden;
+
+                for (global::System.Int32 i = arrRowIndex.Count() + 1; i >= 1; i--)
+                {
+                    Grid.SetRow(arrRowIndex[i], i);
+                }
+            }    
+        }
+
+        private void rdTruoc_Checked(object sender, RoutedEventArgs e)
+        {
+            LayoutSheet(true);
+        }
+
+        private void rdSau_Checked(object sender, RoutedEventArgs e)
+        {
+            LayoutSheet(false);
         }
     }
 }

@@ -115,15 +115,23 @@
                 <TextBlock Grid.Row="0" Grid.Column="6" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">F</TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="7" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">G</TextBlock>
 
-                <TextBlock Grid.Row="1" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
-                <TextBlock Grid.Row="2" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">2</TextBlock>
-                <TextBlock Grid.Row="3" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
-                <TextBlock Grid.Row="4" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">4</TextBlock>
-                <TextBlock Grid.Row="5" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">5</TextBlock>
-                <TextBlock Grid.Row="6" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">6</TextBlock>
-                <TextBlock Grid.Row="7" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">7</TextBlock>
-                <TextBlock Grid.Row="8" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">8</TextBlock>
-                <TextBlock Grid.Row="9" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">9</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="1" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">A</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="2" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">B</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="3" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">C</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="4" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">D</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="5" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">E</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="6" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">F</TextBlock>
+                <TextBlock Grid.Row="10" Grid.Column="7" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">G</TextBlock>
+
+                <TextBlock x:Name="txtRow1" Grid.Row="1" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
+                <TextBlock x:Name="txtRow2" Grid.Row="2" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">2</TextBlock>
+                <TextBlock x:Name="txtRow3" Grid.Row="3" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
+                <TextBlock x:Name="txtRow4" Grid.Row="4" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">4</TextBlock>
+                <TextBlock x:Name="txtRow5" Grid.Row="5" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">5</TextBlock>
+                <TextBlock x:Name="txtRow6" Grid.Row="6" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">6</TextBlock>
+                <TextBlock x:Name="txtRow7" Grid.Row="7" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">7</TextBlock>
+                <TextBlock x:Name="txtRow8" Grid.Row="8" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">8</TextBlock>
+                <TextBlock x:Name="txtRow9" Grid.Row="9" Grid.Column="0" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center">9</TextBlock>
                 
                 <Line x:Name="LineVatTruoc" 
                       Grid.Row="0" 
@@ -1240,13 +1248,13 @@
                              Grid.Column="1"
                              Grid.Row="4"
                              FontSize="25"
-                             IsChecked="True">
+                             IsChecked="True" Checked="rdTruoc_Checked">
                     Mặt trước
                 </RadioButton>
                 <RadioButton x:Name="rdSau"
                              Grid.Column="1"
                              Grid.Row="5"
-                             FontSize="25"
+                             FontSize="25" Checked="rdSau_Checked"
                              >
                     Mặt sau
                 </RadioButton>
